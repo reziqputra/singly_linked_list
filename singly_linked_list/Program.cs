@@ -2,8 +2,17 @@
 
 namespace singly_linked_list
 {
-    internal class Program
+    class node
+    {
+
+    }
+
+    class List
+    class Program
     {
         static void Main(string[]args)
+        {
+
+        }
     }
 }
