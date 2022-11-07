@@ -171,7 +171,19 @@ namespace singly_linked_list
                                 }
                             }
                             break;
+                        case '5':
+                            return;
+                        default:
+                            {
+                                Console.WriteLine("\n Invalid option");
+                                break;
+                            }
+                            break;
                     }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("\nCheck for the value entered");
                 }
             }
         }
