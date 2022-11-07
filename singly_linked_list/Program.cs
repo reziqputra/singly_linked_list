@@ -11,7 +11,20 @@ namespace singly_linked_list
 
     class List
     {
+        Node START;
+        public List()
+        {
+            START = null; ;
+        }
 
+        public void addnote()
+        {
+            int rollNo;
+            string nm;
+            Console.Write();
+            rollNo = Convert.ToInt32(Console.ReadLine());
+            Console.Write();
+        }
     }
     class Program
     {
