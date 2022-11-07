@@ -14,7 +14,7 @@ namespace singly_linked_list
         Node START;
         public List()
         {
-            START = null; ;
+            START = null;
         }
 
         public void addnote()
@@ -28,9 +28,9 @@ namespace singly_linked_list
             Node newnode = new Node();
             newnode.rollnumber = rollNo;
             newnode.name = nm;
-            if((START == null) || rollNo <=START.rollnumber)
+            if ((START == null) || rollNo <= START.rollnumber)
             {
-                if ((START != null)&& (rollNo == START.rollnumber))
+                if ((START != null) && (rollNo == START.rollnumber))
                 {
                     Console.WriteLine();
                     return;
@@ -44,12 +44,12 @@ namespace singly_linked_list
             previous = START;
             current = START;
 
-            while ((current != null)&&(rollNo >= current.rollnumber))
+            while ((current != null) && (rollNo >= current.rollnumber))
             {
-                if(rollNo == current.rollnumber)
+                if (rollNo == current.rollnumber)
                 {
                     Console.WriteLine();
-                    return ;
+                    return;
                 }
                 previous.next = current;
                 previous.next = newnode;
@@ -57,10 +57,25 @@ namespace singly_linked_list
             newnode.next = current;
             previous.next = current;
         }
+
+
+        public bool delnode(int rollNo)
+        {
+            Node previous, current;
+            previous = current = null;
+            if (Search(rollNo, ref previous, ref current) == false)
+                return false;
+            previous.next = current.next;
+            if (current == START)
+                START = START.next;
+            return true;
+        }
+        public bool Search(int rollNo, ref Node previous, ref Node current)
+        {
+            previous = START;
+            current = START;
+        }
     }
-
-    public bool delnode(int)
-
     class Program
     {
         static void Main(string[]args)
