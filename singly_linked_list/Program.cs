@@ -74,6 +74,14 @@ namespace singly_linked_list
         {
             previous = START;
             current = START;
+            while((current != null) && (rollNo != current.rollnumber))
+            {
+                previous = current;
+                current = current.next;
+            }
+            if (current == null)
+                return false;
+            else return true;
         }
     }
     class Program
