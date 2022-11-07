@@ -110,7 +110,14 @@ namespace singly_linked_list
     {
         static void Main(string[]args)
         {
+            List obj = new List();
+            while(true)
+            {
+                try
+                {
 
+                }
+            }
         }
     }
 }
